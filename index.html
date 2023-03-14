@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minha Primeira Página Web Mobile</title>
+        <script>
+        function CalculaIMC(){
+            Peso=parseFloat(FormEntrada.EditPeso.value);
+            Altura=parseFloat(FormEntrada.EditAltura.value);
+            IMC=Peso/(Altura*Altura);
+            if(IMC<20.0){
+                alert("Peso inferior ao normal");
+            }
+            else{
+                if(IMC<25.0) {s
+                    alert("Peso normal");
+                }
+                else{
+                    if(IMC>30.0){
+                        alert("Peso acima do normal");
+                    }
+                    else{
+                        alert("Obeso");
+                    }
+                }
+            }
+            FormEntrada.EditIMC.value=IMC;
+        }
+    </script>
+    </head>
+    <body bgcolor="gray">
+        <table align="center" border="1" bgcolor="White" width="400"
+            height="700">
+            <tr>
+                <td>
+                    <h4 style="font-family: Verdana; color: chartreuse;">Cálculo
+                        IMC Mobile</h4>
+                    <hr>
+                    O índice de Massa Corporal (IMC) relaciona o peso com a
+                    altura e está estreitamente relacionado com o conteúdo total
+                    de gordura no corpo.
+                    <hr>
+                    <form name="FormEntrada" class="style1">
+                        <h4 style="color: #009; font-family: Verdana;">
+                            &nbsp;Peso: &nbsp; &nbsp; &nbsp; &nbsp; <input
+                                type="text" name="EditPeso" size="5"
+                                style="font-size: 24px; font-family: Verdana;
+                                color: #006; background-color: #FCC;">
+                            <br>
+                        </h4>
+                        <h4 style="color: #009; font-family: Verdana;">&nbsp;Altura:
+                            &nbsp;<input type="text" name="EditAltura" size="5"
+                                style="font: 24px; font-family: Verdana; color:
+                                #006; background-color: #FCC;"><br></h4>
+                        <h6>Obs.: Os decimais devem ser separados por um ponto
+                            (não vírgula), por exemplo: 75.7</h6>
+                        <input type="reset" value="Limpar" size="5"
+                            style="font-size: 24px;">
+                        <input type="button" value="Calcular"
+                            onclick="CalculaIMC()" style="font-size: 24px;"><br>
+                        IMC <input type="text" name="EditIMC" size="10"
+                            style="font-size: 24px; font-family: Verdana; color:
+                            #006; background-color: #FCC;">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
