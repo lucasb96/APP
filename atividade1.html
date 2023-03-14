@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minha Primeira Página Web Mobile</title>
+        <script>
+        function CalculaGorjeta(){
+            QtdPessoas=parseFloat(FormEntrada.QtdPessoas.value);
+            Total=parseFloat(FormEntrada.EditValor.value);
+            Gorjeta= ((Total*10/100)/QtdPessoas);
+            
+            FormEntrada.EditGorjeta.value=Gorjeta;
+        }
+    </script>
+    </head>
+    <body bgcolor="gray">
+        <table align="center" border="1" bgcolor="White" width="400"
+            height="700">
+            <tr>
+                <td>
+                    <h4 style="font-family: Verdana; color: chartreuse;">Cálculo
+                        de Gorjeta</h4>
+                    <hr>
+                    Calculadora para Gorjetas
+                    <hr>
+                    <form name="FormEntrada" class="style1">
+                        <h4 style="color: #009; font-family: Verdana;">
+                            &nbsp;Quantidade de Pessoas: &nbsp; &nbsp; &nbsp; &nbsp; <input
+                                type="text" name="QtdPessoas" size="5"
+                                style="font-size: 24px; font-family: Verdana;
+                                color: #006; background-color: #FCC;">
+                            <br>
+                        </h4>
+                        <h4 style="color: #009; font-family: Verdana;">&nbsp;Valor Total da Conta:
+                            &nbsp;<input type="text" name="EditValor" size="5"
+                                style="font: 24px; font-family: Verdana; color:
+                                #006; background-color: #FCC;"><br></h4>
+                        <hr>
+                        <input type="reset" value="Limpar" size="5"
+                            style="font-size: 24px;">
+                        <input type="button" value="Calcular"
+                            onclick="CalculaGorjeta()" style="font-size: 24px;"><br><br>
+                        Gorjeta <input type="text" name="EditGorjeta" size="10"
+                            style="font-size: 24px; font-family: Verdana; color:
+                            #006; background-color: #FCC;">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
